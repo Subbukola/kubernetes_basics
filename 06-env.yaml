@@ -9,8 +9,8 @@ metadata:
 
 spec:
   containers:
-    - name:
-      image:
+    - name: nginx
+      image: mginx
       env:  
         - name: author
           value: subbu
