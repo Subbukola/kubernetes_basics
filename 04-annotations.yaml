@@ -8,7 +8,7 @@ metadata:
     annotations:
       dockerURL: "http://docker.com"
       jenkinsURL: "https://jenkins.io"
-      
+
 spec:
   containers:
     - name: nginx
