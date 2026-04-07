@@ -10,7 +10,7 @@ metadata:
 spec:
   containers:
     - name: nginx
-      image: mginx
+      image: nginx
       env:  
         - name: author
           value: subbu
