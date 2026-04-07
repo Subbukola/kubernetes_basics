@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+    name: robo-pod
+    labels:
+      env: dev
+      project: roboshop
+    annotations:
+      dockerURL: "http://docker.com"
+      jenkinsURL: "https://jenkins.io"
+      
+spec:
+  containers:
+    - name: nginx
+      image: nginx
