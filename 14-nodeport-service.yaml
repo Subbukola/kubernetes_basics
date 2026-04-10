@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: nodeport-svc
+  labels:
+    mode: nodeport
+
+spec:
+  selector:
+    project: roboshop
+    env: dev
+  ports:
+    - targetPort: 80
+      port: 80
+      protocol: TCP
+
+
