@@ -1,6 +1,6 @@
 ---
 apiVersion: apps/v1
-kind: replicaSet
+kind: ReplicaSet
 # this metadata is about only about replicaSet
 metadata:  
   name: replica-set
