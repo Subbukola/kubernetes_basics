@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roboshop-deployment
+  labels:
+    project: roboshop
+    env: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: roboshop
+      env: dev
+  template:
+    metadata:
+      name: robo-dep-pod
+      labels:
+        project: roboshop
+        env: dev
+
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+        

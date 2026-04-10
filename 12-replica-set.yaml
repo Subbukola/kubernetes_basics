@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: replicaSet
+# this metadata is about only about replicaSet
+metadata:  
+  name: replica-set
+  labels:
+    project: roboshop
+    env: dev 
+# this specifications about replicaset
+spec:
+  replicas: 2
+  selector: # matches pod labels 
+    matchLabels:
+      project: roboshop
+      env: dev
+  # this is about pod
+  template:
+    metadata:
+      name: dreplica-set-pod
+      labels:
+        project: roboshop
+        env: dev
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
