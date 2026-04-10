@@ -17,7 +17,7 @@ spec:
   # this is about pod
   template:
     metadata:
-      name: dreplica-set-pod
+      name: replica-set-pod
       labels:
         project: roboshop
         env: dev
