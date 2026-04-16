@@ -44,5 +44,5 @@ spec:
       persistentVolumeClaim:
         claimName: ebs-static  # Must match the name of your PVC
 
-  # nodeSelector:
-  #   topology.kubernetes.io/zone:  us-east-1d
+  nodeSelector:
+    topology.kubernetes.io/zone:  us-east-1d
