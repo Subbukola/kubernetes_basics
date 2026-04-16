@@ -34,7 +34,7 @@ spec:
             memory: 200Mi
         volumeMounts:
         - name: varlog
-          mountPath: /var/log
+          mountPath: /var/log  #host path mounted location
       # it may be desirable to set a high priority class to ensure that a DaemonSet Pod
       # preempts running Pods
       # priorityClassName: important
@@ -42,4 +42,4 @@ spec:
       volumes:
       - name: varlog
         hostPath:
-          path: /var/log
+          path: /var/log # this is host path
