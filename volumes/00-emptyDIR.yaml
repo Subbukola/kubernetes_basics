@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: emptyDIR
+  name: emptydir
 spec:
   containers:
   - image: nginx 
     name: nginx 
     volumeMounts:
     - mountPath: /cache
-      name: nginx-logs  # same name as volume name
+      name: nginx-logs  # same name as volume name    
 
   - image: almalinux:9
     name: almalinux
