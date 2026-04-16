@@ -27,22 +27,22 @@ spec:
     requests:
       storage: 2Gi
 
-# ---
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: ebs-static
-# spec:
-#   containers:
-#     - name: nginx 
-#       image: nginx
-#       volumeMounts:
-#       - mountPath: "/usr/share/ginxhtml"
-#         name: html-data
-#   volumes:
-#     - name: html-data
-#       persistentVolumeClaim:
-#         claimName: ebs-static  # Must match the name of your PVC
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebs-static
+spec:
+  containers:
+    - name: nginx 
+      image: nginx
+      volumeMounts:
+      - mountPath: "/usr/share/ginxhtml"
+        name: html-data
+  volumes:
+    - name: html-data
+      persistentVolumeClaim:
+        claimName: ebs-static  # Must match the name of your PVC
 
-#   nodeSelector:
-#     topology.kubernetes.io/zone:  us-east-1d
+  nodeSelector:
+    topology.kubernetes.io/zone:  us-east-1d
