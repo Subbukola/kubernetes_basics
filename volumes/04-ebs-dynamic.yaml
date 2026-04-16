@@ -4,30 +4,30 @@ kind: PersistentVolumeClaim
 metadata:
   name: ebs-dynamic
 spec:
-  storageClassName: roboshop-ebs # Empty string must be explicitly set otherwise default StorageClass will be set
-  #volumeName: 
   accessModes:
-  - ReadWriteOnce
-  resources:  
+    - ReadWriteOnce
+  storageClassName: roboshop-ebs
+  resources:
     requests:
-      storage: 7Gi
+      storage: 4Gi
 
 ---
+
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ebs-dynamic
+  name: app
 spec:
   containers:
-    - name: nginx 
-      image: nginx
-      volumeMounts:
-      - mountPath: "/usr/share/nginx/html"
-        name: html-data
-  volumes:
+  - name: nginx
+    image: nginx
+    volumeMounts:
     - name: html-data
-      persistentVolumeClaim:
-        claimName: roboshop-ebs # Must match the name of your PVC
-
+      mountPath: /usr/share/nginx/html
   nodeSelector:
-    topology.kubernetes.io/zone:  us-east-1d
+    topology.kubernetes.io/zone: us-east-1d
+  volumes:
+  - name: html-data
+    persistentVolumeClaim:
+      claimName: ebs-dynamic
+    
