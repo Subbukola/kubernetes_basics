@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-static
+  name: ebs-dynamic
 spec:
   storageClassName: roboshop-ebs # Empty string must be explicitly set otherwise default StorageClass will be set
   #volumeName: 
@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ebs-static
+  name: ebs-dynamic
 spec:
   containers:
     - name: nginx 
