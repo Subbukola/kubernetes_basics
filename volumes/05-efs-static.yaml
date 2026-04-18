@@ -1,10 +1,15 @@
+# install efs driver
+#efs driver--> kubectl apply -k "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master"
+# allow AmazonEFSCSIDriverPolicy IAM policy  for instance's SG
+# allow EFS file SG with 2049 port and instances SG as both inbound and outbound
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: efs-static
 spec:
   capacity:
-    storage: 5Gi
+    storage: 5Gi #it ignores as it is EFS
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
