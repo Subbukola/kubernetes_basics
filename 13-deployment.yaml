@@ -27,7 +27,7 @@ spec:
 
 ---
 apiVersion: v1 
-kind: Secret
+kind: Service
 metadata:
   name: deployment-secret
   labels:
