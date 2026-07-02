@@ -1,10 +1,11 @@
 apiVersion: v1 
 kind: Pod
 metadata:
-    Namespace: preparing
+    
     name: robo-pod
     labels:
       env: dev
+      Namespace: preparing
 spec:
   containers:
     - name: nginx
