@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Pod
 metadata:
-    name: robo-pod
+    name: annotation-pod
     namespace: practice
     labels:
       env: dev
