@@ -1,6 +1,7 @@
 apiVersion: v1 
 kind: Pod
 metadata:
+    namespace: preparing
     name: robo-pod
     labels:
       env: dev
@@ -10,6 +11,11 @@ spec:
       image: nginx
       ports:
         - containerPort: 80
+
+    - name: redis
+      image: redis
+      ports:
+        - containerPort: 6379
     
 ---
 # apiVersion: v1
