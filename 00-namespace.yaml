@@ -5,3 +5,15 @@ metadata:
     labels:
       project: roboshop
       environment: dev
+
+
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: practice
+  labels:
+    purpose: preparing
+    env: non-prod
+    

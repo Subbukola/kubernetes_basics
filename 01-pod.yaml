@@ -12,18 +12,18 @@ spec:
         - containerPort: 80
     
 ---
-apiVersion: v1
-kind: Secret 
-metadata:
-  name: pod-expose-secret
+# apiVersion: v1
+# kind: Secret 
+# metadata:
+#   name: pod-expose-secret
 
-spec:
-  selector:
-    env: dev
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
+# spec:
+#   selector:
+#     env: dev
+#   ports:
+#     - port: 80
+#       targetPort: 80
+#       protocol: TCP
 
 
 
