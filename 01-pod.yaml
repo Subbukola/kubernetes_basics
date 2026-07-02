@@ -5,7 +5,7 @@ metadata:
     name: robo-pod
     labels:
       env: dev
-      namespace: preparing
+      namespace: practice
 spec:
   containers:
     - name: nginx
