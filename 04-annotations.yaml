@@ -2,12 +2,14 @@ apiVersion: v1
 kind: Pod
 metadata:
     name: robo-pod
+    namespace: practice
     labels:
       env: dev
       project: roboshop
     annotations:
       dockerURL: "http://docker.com"
       jenkinsURL: "https://jenkins.io"
+      jfrogURL: "https://jfrog.com"
 
 spec:
   containers:
