@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Pod
 metadata:
-    namespace: preparing
+    Namespace: preparing
     name: robo-pod
     labels:
       env: dev
