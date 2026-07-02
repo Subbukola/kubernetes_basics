@@ -34,7 +34,7 @@ metadata:
     project: roboshop
     env: dev
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     project: roboshop
     env: dev
