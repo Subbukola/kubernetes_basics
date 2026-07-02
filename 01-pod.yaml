@@ -3,9 +3,10 @@ kind: Pod
 metadata:
     
     name: robo-pod
+    namespace: practice
     labels:
       env: dev
-      namespace: practice
+      
 spec:
   containers:
     - name: nginx
